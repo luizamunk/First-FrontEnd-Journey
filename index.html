@@ -10,40 +10,40 @@
 <body>
     <header>
         <nav class="navigation clearfix">
-            <div>
-                <!-- Talvez desnecessário -->
-                <ul class="nav-menu">
-                    <a class="link-menu" href="https://www.google.com">
-                        <li>Company</li>
-                    </a>
-                    <a href="https://www.google.com">
-                        <li>Home</li>
-                    </a>
-                    <a href="https://www.google.com">
-                        <li>About</li>
-                    </a>
-                    <a href="https://www.google.com">
-                        <li>Contato</li>
-                    </a>
-                </ul>
+            <ul class="nav-menu">
+                <a class="link-menu" href="https://www.google.com">
+                    <li>Company</li>
+                </a>
+                <a href="https://www.google.com">
+                    <li>Home</li>
+                </a>
+                <a href="https://www.google.com">
+                    <li>About</li>
+                </a>
+                <a href="https://www.google.com">
+                    <li>Contato</li>
+                </a>
+            </ul>
 
-                <ul class="login-menu">
-                    <a href="https://www.google.com">
-                        <li>Profile</li>
-                    </a>
-                    <a href="https://www.google.com">
-                        <li>Log Out</li>
-                    </a>
-                </ul>
-
-
-            </div>
+            <ul class="login-menu">
+                <a href="https://www.google.com">
+                    <li>Profile</li>
+                </a>
+                <a href="https://www.google.com">
+                    <li>Log Out</li>
+                </a>
+            </ul>
 
         </nav>
 
         <div class="banner-div">
-            <img class="banner-image" src="1150x300.png">
-            <!-- alt -->
+            <picture>
+                <source srcset="1150x300.png" media="(min-width:1200px)">
+                <source srcset="900x300.png" media="(min-width:900px)">
+                <source srcset="700x300.png" media="(min-width:700px)"> 
+                <source srcset="480x300.png" media="(min-width:500px)">
+                <img class="banner-image" src="300x300.png" alt="Image with its dimensions">
+            </picture>
         </div>
 
     </header>
