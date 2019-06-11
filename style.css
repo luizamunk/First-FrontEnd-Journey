@@ -1,5 +1,7 @@
 /*Reset browser*/
-html, body {
+
+html,
+body {
     padding: 0;
     margin: 0;
     font-size: 10px;
@@ -14,13 +16,15 @@ html, body {
 
 .content-boxes {
     padding: 2.5rem;
-    width: 1150px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-.btn, .link-like-button, .text-block {
+.btn,
+.link-like-button,
+.text-block {
     font-size: 16px;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -34,6 +38,7 @@ html, body {
     text-align: center;
     border: 0;
 }
+
 
 button:active {
     background-color: brown;
@@ -53,15 +58,21 @@ button:active {
     color: #000000;
     border: 1pt solid;
     border-color: #6C8EBF;
-    margin: 3,3rem;
+    margin: 3, 3rem;
 }
 
 .banner-div {
-    width: 1150px;
+    max-width: 100%;
     margin: 0 auto;
+    text-align: center;
 }
 
-footer {
+.banner-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.site-footer {
     padding: 2.5rem;
     background: #545454;
     color: white;
@@ -73,7 +84,7 @@ footer {
     font-size: 12px;
     background: #222222;
     color: #999999;
-
+    transition: 0.5s ease;
 }
 
 .clearfix::after {
@@ -82,10 +93,8 @@ footer {
     display: table;
 }
 
-/* Links from the left of the  page */
 .nav-menu {
     float: left;
-    
 }
 
 .nav-menu li {
@@ -106,4 +115,42 @@ ul a {
 .login-menu li {
     display: inline;
     margin-right: 2rem;
+}
+
+.toggler {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .btn {
+        background-color: blue;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .toggler {
+        display: block;
+    }
+    .navigation {
+        padding: 0.2rem 0;
+    }
+    .nav-menu {
+        float: none;
+        margin-left: 1rem;
+        margin-bottom: 2.5rem;
+    }
+    .login-menu {
+        float: none;
+        margin-left: 1rem;
+    }
+    .nav-menu a li {
+        display: block;
+        width: 100%;
+        margin: 1.5rem;
+    }
+    .login-menu a li {
+        display: block;
+        margin: 1.5rem;
+    }
+
 }
