@@ -97,9 +97,10 @@ button:active {
     float: left;
 }
 
-.nav-menu li {
-    display: inline;
+.nav-menu li,
+.login-menu li {
     margin: 2rem;
+    list-style: none;
 }
 
 ul a {
@@ -107,14 +108,18 @@ ul a {
     color: #999999;
 }
 
-.login-menu {
-    display: block;
-    float: right;
-}
-
-.login-menu li {
-    display: inline;
-    margin-right: 2rem;
+@media screen and (min-width: 768px) {
+    .login-menu {
+        display: block;
+        float: right;
+    }
+    .nav-menu li {
+        display: inline-block;
+    }
+    .login-menu li {
+        display: inline-block;
+        margin-right: 2rem;
+    }
 }
 
 .toggler {
@@ -127,27 +132,26 @@ ul a {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .toggler {
         display: block;
     }
+
     .navigation {
         padding: 0.2rem 0;
     }
+
     .nav-menu {
         float: none;
-        margin-left: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 3.5rem;
     }
-    .login-menu {
-        float: none;
-        margin-left: 1rem;
-    }
+
     .nav-menu a li {
         display: block;
         width: 100%;
         margin: 1.5rem;
     }
+
     .login-menu a li {
         display: block;
         margin: 1.5rem;

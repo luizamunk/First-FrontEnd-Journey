@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .menu-wrap {
         position: fixed;
         top: 0;
@@ -26,7 +26,7 @@
         height: 30px;
         display: flex;
         padding: 1rem;
-        background: rebeccapurple;
+        background: rgba(13, 110, 139, 0.75);
         align-items: center;
         justify-content: center;
     }
@@ -71,14 +71,59 @@
         transform: rotate(90deg)
     }
 
-    @media screen and (max-width:480px) {
+    @media screen and (max-width:768px) {
         .menu-wrap .menu {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        text-align: center;
         }
+    
+    .login-menu > li > a,
+    .nav-menu > li > a{
+        margin-left: 0;
+        color: white;
     }
 
+    .menu-wrap .menu {
+        background: #063d4ebf;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+        transform: scale(0);
+    }
+    
+    /* Show menu */
+    
+    .menu-wrap .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu-wrap .menu > ul > li > a {
+        color: white;
+        font-size: 16px;
+    }
+
+    .menu-wrap .toggler:checked ~ .menu{
+        visibility: visible;
+        transform: scale(1);
+        transition-duration: 0.75s;
+        font-size: 16px;
+    }
+    }
 }
